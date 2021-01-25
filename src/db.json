@@ -3,7 +3,7 @@
     "is revealed in",
     "makes a surprising appearance in the form of",
     "is shown in",
-    ", an ambitious title, long in the development, appears in",
+    ", is a new ambitious title, long in development, first appearing in",
     "is showcased in",
     "is announced with",
     "is a new title in the series, announced in",
@@ -49,7 +49,7 @@
     "A Demo will be available on the eshop at the end of the presentation",
     "More information is coming",
     "A new Direct will showcase more info",
-    "New @ games are on the way",
+    "Other, new @ games are on the way",
     "More info will be given in an upcoming Direct",
     "No more information is given",
     "Expect more news after the Direct",
@@ -61,14 +61,14 @@
     "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "September", "November", "December"
   ],
   "seasons": [
-    "spring", "fall", "autumn", "winter", "holiday", "christmas"
+    "spring", "fall", "autumn", "winter", "holiday", "Christmas"
   ],
   "supermario": {
     "prefix" : [
       "", "Super ", "Paper ", "Dr. ", "New " 
     ],
     "suffix" : [
-      "", "+", "Kart", "Bros.", "vs. Donkey Kong", "Land", "World", "Universe", "Moonlight", "Paint", "& Luigi", "RPG", "Mansion", "Strikers", "Party", "128", "Tennis", "Mega", " & Rabbids", "Golf", "& Sonic", "Voyage", "Journey", "Galactic"
+      "", "+", "Kart", "Bros.", "vs. Donkey Kong", "Land", "World", "Universe", "Moonlight", "Paint", "& Luigi", "RPG", "Mansion", "Strikers", "Party", "128", "Tennis", "Mega", " & Rabbids", "Golf", "& Sonic", "Vs. Sonic", "Voyage", "Journey", "Galactic"
     ],
     "subtitle" : [
       "", "Maker", "Remix", "3D", "Strikers", "Superstars", "Live", "VR", "AR", "Online", "All-Stars"
@@ -90,7 +90,7 @@
       "Country", "Country Returns -", "Land", "Country:", "World", "Country -", "Counrty"
     ],
     "subtitle": [
-      "Crocodile", "Gangplank", "Jungle", "Ape\"s", "Kremling\"s", "Treetop", "Hot-head", "Stickerbush", "Haunted", "Primal"
+      "Crocodile", "Gangplank", "Jungle", "Ape's", "Kremling's", "Treetop", "Hot-head", "Stickerbush", "Haunted", "Primal"
     ],
     "subtitleEnd": [
       "Disco", "Symphony", "Frenzy", "Galleon", "Blitz", "Menace", "Madness", "Swing", "Rumble", "Saga", "Boggie", "March"
@@ -101,7 +101,7 @@
       "Prime", "-", "", "Prime Hunters:"
     ],
     "subtitle": [
-      "Dread", "Ressurection", "Origins", "Federation Force 2", "Solitude", "Omen", "Insurgence", "Bastion", "Symbiosis", "Void", "Corrosion", "Infection", "Parasite", "Within", "Shattered", "Blast Ball 2", "Reckoning" 
+      "Hollow", "Dread", "Resurrection", "Origins", "Federation Force 2", "Solitude", "Omen", "Insurgence", "Bastion", "Symbiosis", "Void", "Corrosion", "Infection", "Parasite", "Within", "Shattered", "Blast Ball 2", "Reckoning"
     ]    
   },
   "fzero": {
