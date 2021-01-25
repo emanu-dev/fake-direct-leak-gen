@@ -1,0 +1,112 @@
+{
+  "announcement": [
+    "is revealed in",
+    "makes a surprising appearance in the form of",
+    "is shown in",
+    ", an ambitious title, long in the development, appears in",
+    "is showcased in",
+    "is announced with",
+    "is a new title in the series, announced in",
+    "is presented with",
+    "is a new upcoming @ game, shown in",
+    "is a new @ game, appearing with",
+    "will be announced with",
+    "is slated to appear with",
+    "is a big new title, announced in",
+    "announced, being shown in",
+    "is first shown in",
+    "announced, with few things shown in",
+    "appears in the Direct, with",
+    "is supposedly shown in",
+    "is announced. I don\"t know how it will appear, but I\"ve seen"
+  ],
+  "announcement_type": [
+    "an overview trailer",
+    "a debut trailer",
+    "a short teaser",
+    "a developer commentary",
+    "a surprise trailer",
+    "a gameplay trailer",
+    "a trailer",
+    "a long video",
+    "a long trailer",
+    "a cinematic teaser",
+    "a video",
+    "some gameplay form"
+  ],
+  "release": [
+    ", and a release date for",
+    ", and slated for release",
+    ", with a tentative release of",
+    ". Release date is not given, tho I have heard it will release",
+    ", and it is given a release date of",
+    ", and it will be available",
+    ". Available",
+    ", to be released",
+    ". Release date is shown as"
+  ],
+  "extra": [
+    "A Demo will be available on the eshop at the end of the presentation",
+    "More information is coming",
+    "A new Direct will showcase more info",
+    "New @ games are on the way",
+    "More info will be given in an upcoming Direct",
+    "No more information is given",
+    "Expect more news after the Direct",
+    "It will feature free content after release",
+    "DLC and more content is being planned for this title",
+    "Exclusive to the Switch Pro"
+  ],
+  "months": [
+    "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "September", "November", "December"
+  ],
+  "seasons": [
+    "spring", "fall", "autumn", "winter", "holiday", "christmas"
+  ],
+  "supermario": {
+    "prefix" : [
+      "", "Super ", "Paper ", "Dr. ", "New " 
+    ],
+    "suffix" : [
+      "", "+", "Kart", "Bros.", "vs. Donkey Kong", "Land", "World", "Universe", "Moonlight", "Paint", "& Luigi", "RPG", "Mansion", "Strikers", "Party", "128", "Tennis", "Mega", " & Rabbids", "Golf", "& Sonic", "Voyage", "Journey", "Galactic"
+    ],
+    "subtitle" : [
+      "", "Maker", "Remix", "3D", "Strikers", "Superstars", "Live", "VR", "AR", "Online", "All-Stars"
+    ]
+  },
+  "zelda": {
+    "firstWord": [
+      "Melody", "Whisper", "Breath", "Link", "Oracle", "Awakening", "Mask", "Sword", "Wind", "Twilight", "Faces", "Hand", "Light"
+    ],
+    "joint": [
+      "of the", "in the", "for the"
+    ],
+    "secondWord": [
+      "Wise", "Dark", "Evil", "Malice", "Curse", "Hope", "Nature", "Vengeful", "Hero", "Immortal", "Princess", "Twilight", "Accursed", "Old", "Sages", "Past", "Banished", "Heroes", "Time", "Ocarina", "Eternity"
+    ]    
+  },
+  "donkeykong": {
+    "suffix": [
+      "Country", "Country Returns -", "Land", "Country:", "World", "Country -", "Counrty"
+    ],
+    "subtitle": [
+      "Crocodile", "Gangplank", "Jungle", "Ape\"s", "Kremling\"s", "Treetop", "Hot-head", "Stickerbush", "Haunted", "Primal"
+    ],
+    "subtitleEnd": [
+      "Disco", "Symphony", "Frenzy", "Galleon", "Blitz", "Menace", "Madness", "Swing", "Rumble", "Saga", "Boggie", "March"
+    ]    
+  },
+  "metroid": {
+    "suffix": [
+      "Prime", "-", "", "Prime Hunters:"
+    ],
+    "subtitle": [
+      "Dread", "Ressurection", "Origins", "Federation Force 2", "Solitude", "Omen", "Insurgence", "Bastion", "Symbiosis", "Void", "Corrosion", "Infection", "Parasite", "Within", "Shattered", "Blast Ball 2", "Reckoning" 
+    ]    
+  },
+  "fzero": {
+    "subtitle": [
+      "VX", "ZX", "VR", "SX", "Momentum", "+", "Fusion", "Specter", "Ultra", "Strife", "∞", "Ultra GP"
+    ]
+  }
+}
