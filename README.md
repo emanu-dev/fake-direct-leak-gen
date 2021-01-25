@@ -1,18 +1,18 @@
 # Fake Direct Leak Generator
 
-Tired of seeing Nintendo Direct Leaks that are too good to be believed? Well, now you can create your own unrealistic far-fetched leaks. an, better yet, in automagical form!
-Chose your games and subjects, and this tool can generate all the text for you.
+Tired of seeing Nintendo Direct Leaks that are too good to be believed? Well, now you can create your own unrealistic far-fetched leaks. And better yet, in automagical form!
+Chose your games and subjects, and this tool can generate all the text for you. Then, you can tell all your friends that you got all this hot info from your uncle that works you know where :3
 
 ## Features
 
 ### Great selection of games to select and generate 
-What to create the next edgy-subtitled Zelda sequel? What about Mark Kart 128 AllStars? You can find it all here!
+What to create the next edgy-subtitled Zelda sequel? What about Mario Kart 128 AllStars? You can find it all here!
 
 ### Third Party Content
 Have you heard? Red Dead Redemption 2 is coming to Switch! It even uses the new 64GB cartridges too!
 
 ### Typos
-Of course I had to make this feature availble
+Of course, I had to make this feature availble
 
 ------
 
