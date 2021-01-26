@@ -1,18 +1,42 @@
-import { useEffect } from 'react';
-import styled from 'styled-components'
+import { useEffect, useRef, useState } from 'react';
+import styled, {ThemeProvider} from 'styled-components'
 import db from '../src/db.json';
 
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
+const Background = styled.div`
+  align-items: center;
+  background: linear-gradient(60deg, #0072ff, #00c6ff);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+`
+
+const Widget = styled.div`
+  font-size: 1.6rem;
+  background-color: ${props => props.theme.colors.light};
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  border-radius: 1rem;
+  padding: 4rem 6rem;
+  width: 50vw;
+`
+
+const Fake4Chan = styled.ul`
+  padding: 4rem;
+  background-color: #eef2ff;
+  font-size: 10pt;
+  list-style: none;
+  
 `
 
 const Home = () => {
+  const outputElement = useRef(null);
+  const [list, setList] = useState([]);
+
 
   const returnRandomFromArray = (array) => {
     let index = Math.floor(Math.random() * (array.length));
     let output = array[index];
-    array.splice(index, 1);
+    //array.splice(index, 1);
     return output;
   }
 
@@ -94,30 +118,86 @@ const Home = () => {
     let series = s;
 
     string = `${gameName} ${returnRandomFromArray(db.announcement)} ${returnRandomFromArray(db.announcement_type)}${returnRandomFromArray(db.release)} ${generateReleaseDate(2021)}. ${returnRandomFromArray(db.extra)}.`
-
+    console.log(series)
     return replacedString(string, series);
   }
 
-  const appendItem = (id, content) => {
-    let listItem = document.createElement("li");
-    listItem.textContent = content;
-    document.getElementById(id).appendChild(listItem);
+  const handleClick = () => {
+
+    const tempList = [];
+    tempList.push(generateGameSentence('Mario', generateMarioGame()));
+    tempList.push(generateGameSentence('Zelda', generateZeldaGame()));
+    tempList.push(generateGameSentence('Donkey Kong', generateDonkeyKongGame()));
+    tempList.push(generateGameSentence('Metroid', generateMetroidGame()));
+    tempList.push(generateGameSentence('F-Zero', generateFZeroGame()));
+    setList(tempList);
+
   }
 
   useEffect(() => {
-    appendItem('games-list', generateGameSentence('Mario', generateMarioGame()))
-    appendItem('games-list', generateGameSentence('Zelda', generateZeldaGame()))
-    appendItem('games-list', generateGameSentence('Donkey Kong', generateDonkeyKongGame()))
-    appendItem('games-list', generateGameSentence('Metroid', generateMetroidGame()))
-    appendItem('games-list', generateGameSentence('F-Zero', generateFZeroGame()))
     console.log('use effect is running');
   });
 
   return (
     <div>
-      <Title>Home</Title>
-      <button>generate</button>
-      <ul id='games-list'></ul>
+      <Background>
+        <Widget>
+          <form>
+            <div>
+              Select the date for the Fake Direct:
+              <input type="date"/>
+            </div>
+            <p>Select the subjects:<br/></p>
+            <div>
+              <label htmlFor="mario">Mario (Kart, Paper Mario, Party, etc)</label>
+              <input type="checkbox" name="mario"/>
+              <label htmlFor="zelda">Legend of Zelda</label>
+              <input type="checkbox" name="zelda"/>
+              <label htmlFor="donkeykong">Donkey Kong</label>
+              <input type="checkbox" name="donkeykong"/>
+              <label htmlFor="metroid">Metroid</label>
+              <input type="checkbox" name="metroid"/>
+            </div>
+            <div>
+              <label htmlFor="fzero">F-Zero</label>
+              <input type="checkbox" name="fzero"/>
+              <label htmlFor="kirby">Kirby</label>
+              <input type="checkbox" name="kirby"/>
+              <label htmlFor="wario">Wario</label>
+              <input type="checkbox" name="donkeykong"/>
+              <label htmlFor="starfox">Starfox</label>
+              <input type="checkbox" name="starfox"/>
+            </div>
+            <div>
+              <label htmlFor="sequels">Sequels</label>
+              <input type="checkbox" name="sequels"/>
+              <label htmlFor="remakes">Remakes/Remasters</label>
+              <input type="checkbox" name="remakes"/>
+              <label htmlFor="3rdparty">Third Party Ports/Exclusives</label>
+              <input type="checkbox" name="3rdparty"/>
+              <label htmlFor="dreamgames">Miscellaneous</label>
+              <input type="checkbox" name="dreamgames"/>
+            </div>
+            <div>
+              <label htmlFor="smash">Smash Character Reveal</label>
+              <input type="checkbox" name="smash"/>
+              <label htmlFor="switchpro">Switch Pro Information</label>
+              <input type="checkbox" name="switchpro"/>
+            </div>
+            <button type='submit' onClick={(e) => {
+              e.preventDefault();
+              handleClick()
+            }}>Generate</button>
+          </form>
+          <Fake4Chan ref={outputElement}>
+            <hr/>
+            <li><input type="checkbox"/><strong>Nintendo Direct Leak <span style={{color: '#117743'}}>Anonymous</span></strong> 01/21/21(Thu)13:11:30 ▶</li>
+            { list.map((item, index) => (
+              <li key={index}><br/>{item}<br/> </li>
+            ))}
+          </Fake4Chan>
+        </Widget>
+      </Background>
     </div>
 
   )
