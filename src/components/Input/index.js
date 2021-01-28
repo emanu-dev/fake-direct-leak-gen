@@ -69,8 +69,48 @@ const Input = styled.input`
   }  
 `
 
+Input.Tooltip = styled.div`
+  background-color: ${props => props.theme.colors.midtone};
+  border-radius: 5px;
+  box-shadow: -4px 4px 16px rgba(0, 0, 0, 0.1);
+  color: ${props => props.theme.colors.primary};
+  font-size: 1.2rem;
+  height: 4rem;
+  min-width: 20rem;
+  opacity: 0;
+  padding: 1rem 2rem;
+  position: absolute;
+  pointer-events: none;
+  top: -5rem;
+  transition: opacity 300ms ease-out 1s;
+  z-index: 9999;
+  
+  &::after {
+    background-color: ${props => props.theme.colors.midtone};
+    content: ' ';
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    left: .5rem;
+    bottom: -.25rem;
+    transform: rotate(45deg);
+    z-index: -1;
+  }
+`
+
 Input.Label = styled.label`
   font-size: 1.4rem;
+  position: relative;
+  
+  &:hover {
+    > ${Input.Tooltip} {
+      opacity: 1;
+    }    
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 1.2rem;
+  }
 `
 
 export default Input;

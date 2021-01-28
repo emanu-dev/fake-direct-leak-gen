@@ -8,6 +8,13 @@ const Background = styled.div`
   justify-content: center;
   min-height: 100vh;
   padding: 10rem;
+  
+  
+  @media screen and (max-width: 600px) {
+    padding: 2rem;
+    height: 100%;
+    width: 100%;
+  }
 `
 
 export default Background;

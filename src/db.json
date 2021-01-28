@@ -63,6 +63,78 @@
   "seasons": [
     "spring", "fall", "autumn", "winter", "holiday", "Christmas"
   ],
+  "topics" : [
+    {
+      "label" : "Super Mario",
+      "name" : "mario",
+      "desc" : "Super Mario Series games. Ex: Mainline games, Mario Kart, Mario Tennis, Mario Maker, etc."
+    },
+    {
+      "label" : "Legend of Zelda",
+      "name" : "zelda",
+      "desc" : ""
+    },
+    {
+      "label" : "Donkey Kong",
+      "name" : "donkeykong",
+      "desc" : ""
+    },
+    {
+      "label" : "Metroid",
+      "name" : "metroid",
+      "desc" : ""
+    },
+    {
+      "label" : "F-Zero",
+      "name" : "fzero",
+      "desc" : ""
+    },
+    {
+      "label" : "Kirby",
+      "name" : "kirby",
+      "desc" : ""
+    },
+    {
+      "label" : "Wario",
+      "name" : "donkeykong",
+      "desc" : ""
+    },
+    {
+      "label" : "Starfox",
+      "name" : "starfox",
+      "desc" : ""
+    },
+    {
+      "label" : "Sequels",
+      "name" : "sequels",
+      "desc" : ""
+    },
+    {
+      "label" : "Remakes",
+      "name" : "remakes",
+      "desc" : ""
+    },
+    {
+      "label" : "3rdParty Games",
+      "name" : "3rdparty",
+      "desc" : ""
+    },
+    {
+      "label" : "Miscellaneous",
+      "name" : "dreamgames",
+      "desc" : ""
+    },
+    {
+      "label" : "Smash Char. Reveal",
+      "name" : "smash",
+      "desc" : ""
+    },
+    {
+      "label" : "Switch Pro Info",
+      "name" : "switchpro",
+      "desc" : ""
+    }
+  ],
   "supermario": {
     "prefix" : [
       "", "Super ", "Paper ", "Dr. ", "New " 

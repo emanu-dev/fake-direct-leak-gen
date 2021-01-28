@@ -7,6 +7,10 @@ const GlobalStyle = createGlobalStyle`
     src: url('/webFonts/Gilroy-Light/font.woff2') format('woff2'), url('/webFonts/Gilroy-Light/font.woff') format('woff');
   }
 
+  * {
+    box-sizing: border-box;
+  }
+  
   html {
     font-size: 10px;
   }
@@ -26,6 +30,8 @@ const theme = {
     primary: '#E70009',
     secondary: '#9F5A5C',
     light: '#e8ebee',
+    lighter: '#fafeff',
+    midtone: '#d6d6e0',
   },
 }
 

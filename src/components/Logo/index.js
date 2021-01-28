@@ -14,7 +14,7 @@ const Logo = () => {
   return (
     <LogoWrapper>
       <Image
-        src="/assets/logo.png"
+        src="/assets/logo.svg"
         alt="Nintendo Direct Fake Leak Generator"
         width={657}
         height={200}/>
