@@ -18,7 +18,7 @@
     "announced, with few things shown in",
     "appears in the Direct, with",
     "is supposedly shown in",
-    "is announced. I don\"t know how it will appear, but I\"ve seen"
+    "is announced. I don't know how it will appear, but I've seen"
   ],
   "announcement_type": [
     "an overview trailer",
@@ -96,7 +96,7 @@
     },
     {
       "label" : "Wario",
-      "name" : "donkeykong",
+      "name" : "wario",
       "desc" : ""
     },
     {

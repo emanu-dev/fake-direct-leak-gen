@@ -6,6 +6,7 @@ const Widget = styled.div`
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
   border-radius: 1rem;
   padding: 4rem 6rem;
+  transition: height 300ms ease;
   max-width: 70rem;
   width: 50vw;
 

@@ -113,4 +113,34 @@ Input.Label = styled.label`
   }
 `
 
+Input.Date = styled.input`
+  appearance: none;
+  color: ${props => props.theme.colors.midtone};
+  border:1px solid ${props => props.theme.colors.midtone};
+  border-radius: 5px;
+  background: ${props => props.theme.colors.lighter};
+  outline-color: ${props => props.theme.colors.midtone};
+  padding: 5px;
+  display: inline-block !important;
+  visibility: visible !important;
+  
+  &::-webkit-clear-button {
+    display: none;
+  }
+
+  &::-webkit-inner-spin-button {
+    display: none;
+  }
+
+  &::-webkit-calendar-picker-indicator {
+    color: ${props => props.theme.colors.primary};
+  }
+  
+
+  &:focus {
+    color: ${props => props.theme.colors.midtone};
+    box-shadow: none;
+  }
+`
+
 export default Input;
