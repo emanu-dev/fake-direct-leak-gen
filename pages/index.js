@@ -9,6 +9,7 @@ import Form from "../src/components/Form";
 import Handler from '../src/utils/Handler';
 import Generate from '../src/utils/Generate';
 import DateHandler from '../src/utils/DateHandler';
+import { motion } from 'framer-motion'
 
 
 const Home = () => {
@@ -57,16 +58,43 @@ const Home = () => {
   return (
     <div>
       <Background>
-        <Widget>
+        <Widget
+        as={motion.div}
+        transition ={{delay: 0, duration: 0.5}}
+        variants={{
+            show: {opacity: 1, y:'0'},
+            hidden: {opacity: 0, y:'5%'}
+          }}
+          initial="hidden"
+          animate="show"
+        >
           <Logo />
           <Form>
             <p>Select the date for the Fake Direct:</p>
             <Input.Date type="date"/>
             <hr />
-            <ItemList>
+            <ItemList
+              as={motion.label}
+              transition ={{delay: .1, duration: 0.3}}
+              variants={{
+                show: {opacity: 1, y:'0'},
+                hidden: {opacity: 0, y:'5%'}
+              }}
+              initial="hidden"
+              animate="show"
+            >
               <ItemList.Header>Select the subjects:</ItemList.Header>
               {db.topics.map ( (topic, index) => (
-                <Input.Label key={index}>
+                <Input.Label key={index}
+                             as={motion.label}
+                             transition ={{delay: .2 + index*.1, duration: 0.3}}
+                             variants={{
+                               show: {opacity: 1, y:'0'},
+                               hidden: {opacity: 0, y:'5%'}
+                             }}
+                             initial="hidden"
+                             animate="show"
+                >
                   <Input type="checkbox" name={topic.name} onChange={ () => {
 
                     if (!topicsList.includes(topic.name)) {
@@ -89,7 +117,9 @@ const Home = () => {
               handleClick()
             }}>Generate</button>
           </Form>
-          {outputList.length > 0 && <Output ref={outputElement} broadcastDate='February, 27'>
+          {outputList.length > 0 && <Output
+            ref={outputElement}
+            broadcastDate='February, 27'>
             { outputList.map((item, index) => (
               <li key={index}><br/>{item}<br/> </li>
             ))}

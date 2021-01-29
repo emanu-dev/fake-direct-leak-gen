@@ -138,7 +138,7 @@ Input.Date = styled.input`
   
 
   &:focus {
-    color: ${props => props.theme.colors.midtone};
+    color: ${props => props.theme.colors.secondary};
     box-shadow: none;
   }
 `

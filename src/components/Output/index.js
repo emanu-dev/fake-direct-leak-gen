@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
+import {motion} from "framer-motion";
 
 const Fake4Chan = styled.ul`
   background-color: #eef2ff;
@@ -13,10 +14,20 @@ const Fake4Chan = styled.ul`
 
 const Output = React.forwardRef((props, ref) => {
   return (
-    <Fake4Chan ref={ref}>
+    <Fake4Chan
+      ref={ref}
+      as={motion.ul}
+      transition ={{delay: 0, duration: 0.5}}
+      variants={{
+        show: {opacity: 1, scale:1},
+        hidden: {opacity: 0, scale:.5}
+      }}
+      initial="hidden"
+      animate="show"
+    >
       <hr/>
       <li><input type="checkbox"/><strong>Nintendo Direct Leak <span style={{color: '#117743'}}>Anonymous</span></strong> 01/21/21(Thu)13:11:30 ▶</li>
-      <li>Hey guys, got word from an insider that a new Direct will be broadcast on {props.broadcastDate}: </li>
+      <li><br />Hey guys, got word from an insider that a new Direct will be broadcast on {props.broadcastDate}: </li>
       {props.children}
     </Fake4Chan>
   )
