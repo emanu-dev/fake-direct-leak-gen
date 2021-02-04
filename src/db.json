@@ -180,5 +180,13 @@
     "subtitle": [
       "VX", "ZX", "VR", "SX", "Momentum", "+", "Fusion", "Specter", "Ultra", "Strife", "∞", "Ultra GP"
     ]
+  },
+  "kirby" : {
+    "subtitle": ["Super", "Star", "Battle", "Battles", "Amazing", "Epic", "Air's", "Dream Land's", "Crystal"],
+    "subtitleEnd": ["Festival", "Allies", "Mirror", "Nigthamre", "Nightmare", "Course"]
+  },
+  "wario" : {
+    "subtitle": ["Ware Inc.", " and Games", " Land", " World", "Ware: ", "Blast", " & Waluigi"],
+    "subtitleEnd" : [" - Switched!", " - Make-it-Yourself", " - Macrotreasures", " Punch it!", " Shrinked Saga", " Move It!", " Crashed!", " Master of Treasures"]
   }
 }

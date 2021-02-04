@@ -37,10 +37,24 @@ const generateFZeroGame = () => {
   return `F-Zero ${subtitle}`
 }
 
+const generateKirbyGame = () => {
+  const subtitle = Handlers.returnRandomFromArray(db.kirby.subtitle);
+  const subtitleEnd = Handlers.returnRandomFromArray(db.kirby.subtitleEnd);
+  return `Kirby  ${subtitle} ${subtitleEnd}`
+}
+
+const generateWarioGame = () => {
+  const subtitle = Handlers.returnRandomFromArray(db.wario.subtitle);
+  const subtitleEnd = Handlers.returnRandomFromArray(db.wario.subtitleEnd);
+  return `Wario  ${subtitle} ${subtitleEnd}`
+}
+
 export default {
   mario : generateMarioGame,
   zelda : generateZeldaGame,
   donkeykong : generateDonkeyKongGame,
   metroid : generateMetroidGame,
   fzero : generateFZeroGame,
+  kirby : generateKirbyGame,
+  wario : generateWarioGame,
 }
