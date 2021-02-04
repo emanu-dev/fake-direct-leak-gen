@@ -61,7 +61,7 @@
     "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "September", "November", "December"
   ],
   "seasons": [
-    "spring", "fall", "autumn", "winter", "holiday", "Christmas"
+    "spring", "summer", "fall", "autumn", "winter", "holiday", "Christmas"
   ],
   "topics" : [
     {

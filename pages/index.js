@@ -18,14 +18,12 @@ const Home = () => {
   const dateElement = React.useRef(null);
   const [topicsList, setTopicsList] = React.useState([]);
   const [outputList, setOutputList] = React.useState([]);
-  const [date, setDate] = React.useState({});
+  const [broadcastDate, setBroadcastDate] = React.useState({});
 
-  const generateGameSentence = (s, g) => {
+  const generateGameSentence = (series, gameName, broadcastDate) => {
     let string = '';
-    let gameName = g;
-    let series = s;
 
-    string = `${gameName} ${Handler.returnRandomFromArray(db.announcement)} ${Handler.returnRandomFromArray(db.announcement_type)}${Handler.returnRandomFromArray(db.release)} ${DateHandler.generate(2021)}. ${Handler.returnRandomFromArray(db.extra)}.`
+    string = `${gameName} ${Handler.returnRandomFromArray(db.announcement)} ${Handler.returnRandomFromArray(db.announcement_type)}${Handler.returnRandomFromArray(db.release)} ${DateHandler.generate(broadcastDate)}. ${Handler.returnRandomFromArray(db.extra)}.`
     return Handler.replacedString(string, series);
   }
 
@@ -46,7 +44,7 @@ const Home = () => {
       case '11' : namedMonth = Math.random() > 0.5 ? 'November' : 'Nov'; break;
       case '12' : namedMonth = Math.random() > 0.5 ? 'December' : 'Dec'; break;
     }
-    setDate({
+    setBroadcastDate({
       month : tempDate[1],
       day : tempDate[2],
       year : tempDate[0],
@@ -63,13 +61,13 @@ const Home = () => {
 
     topicsList.forEach( (topic) => {
       switch (topic) {
-        case 'mario': tempList.push(generateGameSentence('Mario', Generate.mario())); break;
-        case 'zelda': tempList.push(generateGameSentence('Zelda', Generate.zelda())); break;
-        case 'donkeykong': tempList.push(generateGameSentence('Donkey Kong', Generate.donkeykong())); break;
-        case 'metroid': tempList.push(generateGameSentence('Metroid', Generate.metroid())); break;
-        case 'fzero': tempList.push(generateGameSentence('F-Zero', Generate.fzero())); break;
-        case 'kirby': tempList.push(generateGameSentence('Kirby', Generate.kirby())); break;
-        case 'wario': tempList.push(generateGameSentence('Wario', Generate.wario())); break;
+        case 'mario': tempList.push(generateGameSentence('Mario', Generate.mario(), broadcastDate)); break;
+        case 'zelda': tempList.push(generateGameSentence('Zelda', Generate.zelda(), broadcastDate)); break;
+        case 'donkeykong': tempList.push(generateGameSentence('Donkey Kong', Generate.donkeykong(), broadcastDate)); break;
+        case 'metroid': tempList.push(generateGameSentence('Metroid', Generate.metroid(), broadcastDate)); break;
+        case 'fzero': tempList.push(generateGameSentence('F-Zero', Generate.fzero(), broadcastDate)); break;
+        case 'kirby': tempList.push(generateGameSentence('Kirby', Generate.kirby(), broadcastDate)); break;
+        case 'wario': tempList.push(generateGameSentence('Wario', Generate.wario(), broadcastDate)); break;
         case 'starfox': tempList.push('starfox game here'); break;
         case 'sequels': tempList.push('sequels here'); break;
         case 'remakes': tempList.push('remakes here'); break;
@@ -141,6 +139,7 @@ const Home = () => {
                       setTopicsList(topicsList.filter(item => item !== topic.name))
                     }
 
+                    setOutputList([]);
                   }}/>
                   {topic.label}
                 </Input.Label>
@@ -148,13 +147,8 @@ const Home = () => {
               )}
             </ItemList>
             <div>
-              <Button type='submit' disabled={topicsList.length === 0 || Object.keys(date).length === 0} onClick={(e) => {
+              <Button type='submit' disabled={topicsList.length === 0 || Object.keys(broadcastDate).length === 0} onClick={(e) => {
                 e.preventDefault();
-                const today = new Date();
-                const year = today.getFullYear().toString();
-                const namedDay = today.toLocaleDateString('en-us', { weekday: 'long' }).substr(0, 3);
-                const todayString = `${today.getMonth()+1}/${today.getDate()}/${year.substring(2)}(${namedDay})${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`
-                console.log(todayString);
                 setOutputList([]);
                 handleClick();
               }}>
@@ -164,7 +158,7 @@ const Home = () => {
           </Form>
           {outputList.length > 0 && <Output
             ref={outputElement}
-            broadcastDate={`${date.namedMonth}, ${date.day}`}>
+            broadcastDateString={`${broadcastDate.namedMonth}, ${broadcastDate.day}`}>
             { outputList.map((item, index) => (
               <li key={index}><br/>{item}<br/> </li>
             ))}
