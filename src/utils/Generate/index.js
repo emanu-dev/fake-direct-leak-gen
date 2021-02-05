@@ -12,9 +12,14 @@ const generateMarioGame = () => {
 const generateZeldaGame = () => {
   const firstWord = Handlers.returnRandomFromArray(db.zelda.firstWord);
   const joint = Handlers.returnRandomFromArray(db.zelda.joint);
-  const secondWord = Handlers.returnRandomFromArray(db.zelda.secondWord);
+  let secondWord = Handlers.returnRandomFromArray(db.zelda.secondWord);
 
-  return `The Legend of Zelda: ${firstWord} ${joint} ${secondWord}`;
+  while (firstWord === secondWord) {
+    secondWord = Handlers.returnRandomFromArray(db.zelda.secondWord);
+  }
+
+  let output = Math.random() > .4 ? `The Legend of Zelda: ${firstWord} ${joint} ${secondWord}` : `The Legend of Zelda: ${secondWord} ${firstWord}`
+  return output;
 }
 
 const generateDonkeyKongGame = () => {
