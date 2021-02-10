@@ -49,7 +49,7 @@
     "A Demo will be available on the eshop at the end of the presentation",
     "More information is coming",
     "A new Direct will showcase more info",
-    "Other, new @ games are on the way",
+    "Other games of the series are on the way",
     "More info will be given in an upcoming Direct",
     "No more information is given",
     "Expect more news after the Direct",
@@ -188,5 +188,10 @@
   "wario" : {
     "subtitle": ["Ware Inc.", " and Games", " Land", " World", "Ware: ", "Blast", " & Waluigi"],
     "subtitleEnd" : [" - Switched!", " - Make-it-Yourself", " - Macrotreasures", " Punch it!", " Shrinked Saga", " Move It!", " Crashed!", " Master of Treasures"]
+  },
+  "starfox": {
+    "subtitle": [
+      "Switch", "Legacy", "VR", "Lylat Wars", "One", "Grand Prix", "Squadrons", "Uprising", "Andross' Revenge", "VS", "Rumble", "Blast"
+    ]
   }
 }

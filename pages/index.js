@@ -53,12 +53,12 @@ const Home = () => {
         case 'fzero': tempList.push(generateGameSentence('F-Zero', Generate.fzero(), broadcastDate)); break;
         case 'kirby': tempList.push(generateGameSentence('Kirby', Generate.kirby(), broadcastDate)); break;
         case 'wario': tempList.push(generateGameSentence('Wario', Generate.wario(), broadcastDate)); break;
-        case 'starfox': tempList.push('starfox game here'); break;
+        case 'starfox': tempList.push(generateGameSentence('Starfox', Generate.starfox(), broadcastDate)); break;
         case 'sequels': tempList.push('sequels here'); break;
         case 'remakes': tempList.push('remakes here'); break;
         case '3rdparty': tempList.push('3rd party content here'); break;
         case 'dreamgames': tempList.push('misc content here'); break;
-        case 'smash': tempList.push('smash character here'); break;
+        case 'smash': tempList.push(Generate.smash); break;
         case 'switchpro': tempList.push('switch pro info here'); break;
       }
     })
