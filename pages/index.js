@@ -23,33 +23,18 @@ const Home = () => {
   const generateGameSentence = (series, gameName, broadcastDate) => {
     let string = '';
 
-    string = `${gameName} ${Handler.returnRandomFromArray(db.announcement)} ${Handler.returnRandomFromArray(db.announcement_type)}${Handler.returnRandomFromArray(db.release)} ${DateHandler.generate(broadcastDate)}. ${Handler.returnRandomFromArray(db.extra)}.`
+    string = `${gameName} 
+    ${Handler.returnRandomFromArray(db.announcement)} 
+    ${Handler.returnRandomFromArray(db.announcement_type)}
+    ${Handler.returnRandomFromArray(db.release)} 
+    ${DateHandler.generate(broadcastDate)}. 
+    ${Handler.returnRandomFromArray(db.extra)}.`
+
     return Handler.replacedString(string, series);
   }
 
   const processDate = (date) => {
-    const tempDate = date.split('-');
-    let namedMonth = '';
-    switch (tempDate[1]) {
-      case '01' : namedMonth = Math.random() > 0.5 ? 'January' : 'Jan'; break;
-      case '02' : namedMonth = Math.random() > 0.5 ? 'February' : 'Feb'; break;
-      case '03' : namedMonth = Math.random() > 0.5 ? 'March' : 'Mar'; break;
-      case '04' : namedMonth = Math.random() > 0.5 ? 'April' : 'Apr'; break;
-      case '05' : namedMonth = 'May'; break;
-      case '06' : namedMonth = Math.random() > 0.5 ? 'June' : 'Jun'; break;
-      case '07' : namedMonth = Math.random() > 0.5 ? 'Jul' : 'July'; break;
-      case '08' : namedMonth = Math.random() > 0.5 ? 'August' : 'Aug'; break;
-      case '09' : namedMonth = Math.random() > 0.5 ? 'September' : 'Sep'; break;
-      case '10' : namedMonth = Math.random() > 0.5 ? 'October' : 'Oct'; break;
-      case '11' : namedMonth = Math.random() > 0.5 ? 'November' : 'Nov'; break;
-      case '12' : namedMonth = Math.random() > 0.5 ? 'December' : 'Dec'; break;
-    }
-    setBroadcastDate({
-      month : tempDate[1],
-      day : tempDate[2],
-      year : tempDate[0],
-      namedMonth : namedMonth,
-    });
+    setBroadcastDate(DateHandler.processDate(date));
   }
 
   const reset = () => {
@@ -80,10 +65,6 @@ const Home = () => {
 
     setOutputList(tempList);
   }
-
-  React.useEffect(() => {
-
-  });
 
   return (
     <div>

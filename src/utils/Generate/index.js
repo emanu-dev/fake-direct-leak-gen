@@ -18,8 +18,7 @@ const generateZeldaGame = () => {
     secondWord = Handlers.returnRandomFromArray(db.zelda.secondWord);
   }
 
-  let output = Math.random() > .4 ? `The Legend of Zelda: ${firstWord} ${joint} ${secondWord}` : `The Legend of Zelda: ${secondWord} ${firstWord}`
-  return output;
+  return Math.random() > .4 ? `The Legend of Zelda: ${firstWord} ${joint} ${secondWord}` : `The Legend of Zelda: ${secondWord} ${firstWord}`
 }
 
 const generateDonkeyKongGame = () => {
