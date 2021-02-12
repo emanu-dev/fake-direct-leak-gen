@@ -81,6 +81,22 @@ const generateSwitchProInfo = (currentMonth, currentYear) => {
   return `Switch Pro ${Handlers.returnRandomFromArray(db.switchpro.announcement)}. Its official name is ${Handlers.returnRandomFromArray(db.switchpro.name)}. ${Handlers.returnRandomFromArray(db.switchpro.more)} ${specArray.join(', ')}. To be released ${releaseDate}`;
 }
 
+const generateSequels = () => {
+  let gameSequelArray = []
+  let tempGameObject;
+
+  while (gameSequelArray.length < 3) {
+      tempGameObject = Handlers.returnRandomFromArray(db.sequels);
+
+      if (!gameSequelArray.includes(tempGameObject)) {
+        gameSequelArray.push(`${tempGameObject.name} ${Handlers.returnRandomFromArray(tempGameObject.suffix)}`)
+      }
+  }
+
+  return gameSequelArray;
+  
+}
+
 export default {
   mario : generateMarioGame,
   zelda : generateZeldaGame,
@@ -92,4 +108,5 @@ export default {
   starfox : generateStarfoxGame,
   smash: generateSmashCharacter,
   switchpro: generateSwitchProInfo,
+  sequels: generateSequels,
 }

@@ -363,5 +363,40 @@
       "It will feature",
       "Among the specs are"
     ]
-  }
+  },
+  "sequels" : [
+    {"name": "Xenoblade Chronicles", "suffix": ["X2", "3"]},
+    {"name": "Startropics", "suffix": ["3"]},
+    {"name": "Mother", "suffix": ["4"]},
+    {"name": "Astral Chain", "suffix": ["2"]},
+    {"name": "Advance Wars", "suffix": ["- Days of Ruin 2", "Switch"]},
+    {"name": "Pikmin", "suffix": ["4"]},
+    {"name": "Pokkén Tournament", "suffix": ["2"]},
+    {"name": "Sin and Punishment", "suffix": ["3"]},
+    {"name": "Battalion Wars", "suffix": ["3"]},
+    {"name": "Golden Sun", "suffix": ["4"]},
+    {"name": "1080º Snowboarding", "suffix": ["Switch"]},
+    {"name": "Wave Race", "suffix": ["Switch"]},
+    {"name": "Eternal Darkness", "suffix": ["2"]},
+    {"name": "Chibi-Robo", "suffix": ["for Switch"]},
+    {"name": "Disaster: Day of Crysis", "suffix": ["2"]},
+    {"name": "ExciteBots", "suffix": ["Switch"]},
+    {"name": "Excite Truck", "suffix": ["Switch"]},
+    {"name": "Excitebike", "suffix": ["Switch"]},
+    {"name": "Pandora's Tower", "suffix": ["2"]},
+    {"name": "The Last Story", "suffix": ["2"]},
+    {"name": "Captain Toad", "suffix": ["2"]},
+    {"name": "Mach Rider", "suffix": ["for Switch"]},
+    {"name": "Kid Icarus", "suffix": ["for Switch"]},
+    {"name": "Marvelous", "suffix": ["for Switch"]},
+    {"name": "Ballon Fight", "suffix": ["for Switch"]},
+    {"name": "Pilotwings", "suffix": ["4", "for Switch"]},
+    {"name": "Blast Corps", "suffix": ["2", "for Switch"]},
+    {"name": "Pokémon Conquest", "suffix": ["2"]},
+    {"name": "Pushmo", "suffix": ["for Switch"]},
+    {"name": "Elite Beat Agents/Ouendan", "suffix": ["for Switch"]},
+    {"name": "Diddy Kong Racing", "suffix": ["2", "for Switch"]},
+    {"name": "Dril Dozer", "suffix": ["2", "for Switch"]},
+    {"name": "Punch-Out!!", "suffix": ["for Switch"]}
+  ]
 }
