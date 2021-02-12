@@ -10,11 +10,14 @@ const Widget = styled.div`
   max-width: 70rem;
   width: 50vw;
 
-  @media screen and (max-width: 600px) {
-    font-size: 1.4rem;
-    padding: 2rem 2rem;
+  @media screen and (max-width: 800px) {
     width: auto;
   }  
+
+  @media screen and (max-width: 1000px) {
+    padding: 2rem;
+  }
+
 `
 
 export default Widget;

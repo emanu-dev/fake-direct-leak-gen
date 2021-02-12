@@ -59,111 +59,26 @@ const generateStarfoxGame = () => {
 }
 
 const generateSmashCharacter = () => {
-  const characters = [
-    'Master Chief',
-    'Sora',
-    'Knuckles',
-    'Dante from the Devil May Cry Series',
-    'Leon S. Kennedy',
-    'Crash Bandicoot',
-    'Geno',
-    'Noctis from Final Fantasy XV',
-    'Razz from Battletoads',
-    'Shadow the Hedgehog',
-    'Rex from Xenoblade 2',
-    'Elma from Xenoblade X',
-    'Nabit',
-    'Waluigi',
-    'Wart',
-    'Tatanga',
-    'King Boo',
-    'Birdo',
-    'Baby Mario & Yoshi',
-    'Tingle',
-    'Wolf Link',
-    'Tetra from The Legend of Zelda',
-    'Revali',
-    'Daruk',
-    'Mipha',
-    'Urbosa',
-    'Groose',
-    'Goose from Untitled Goose Game',
-    'Dixie Kong',
-    'Sylux from Metroid Prime Hunters',
-    'Krystal from Starfox Adventures',
-    'Paper Mario',
-    'Waddle Dee',
-    'Yarn Kirby',
-    'Cinderace',
-    'Inteleon',
-    'Samurai Goroh',
-    'Dunban',
-    'Andy from Advance Wars',
-    'Kain Grinder from Golden Axe',
-    'Isaac from Golden Sun',
-    'Crono from Chrono Trigger',
-    'Jago from Killer Instinct',
-    'Snowboarder from 1080º Snowboarding',
-    'Chibi-Robo',
-    'Alexandra Roivas from Eternal Darkness',
-    'Vyse from skies of Arcadia',
-    'Rayman',
-    'Raymond Bryce from Disaster: Day of Crisis',
-    'Captain Toad',
-    'Wonder Red from Wonderful 101',
-    'Dancer from Just Dance',
-    'Shantae',
-    'Professor Layton',
-    'Albert Wesker',
-    'Kid Dracula',
-    'Farmer from Story of Seasons',
-    'Ratchet and Clank',
-    'Bonk',
-    'Bubsy',
-    'Hunter from Monster Hunter',
-    'Conker',
-    'Doomguy',
-    'Lara Croft',
-    'Ezio Auditore',
-    'Gordon Freeman',
-    'Geralt',
-    'Big Daddy from Bioshock',
-    'Raiden from Metal Gear',
-    'Kiryu from Yazuka',
-    'Aloy from Horizon Zero Dawn',
-    'Tom Nook',
-    'Marcus Fenix',
-    'Duke Nukem',
-    'Earthworm Jim',
-    'Spyro the Dragon',
-    'Ryu Hayabusa',
-    'Nathan Drake',
-    'Sam Fisher from Splinter Cell',
-  ];
+  return `${Handlers.returnRandomFromArray(db.smash.characters)} ${Handlers.returnRandomFromArray(db.smash.announcement)}. ${Handlers.returnRandomFromArray(db.smash.reveal)}. ${Handlers.returnRandomFromArray(db.smash.later)}`
+}
 
-  const announcement = [
-    'joins the fight in Smash',
-    'is coming to Smash',
-    'is a new addition to the smash roster',
-    'is the new smash Ultimate character',
-    'is surprisingly the new character in Smash',
-    'is announced as coming to smash bros.',
-  ]
+const generateSwitchProInfo = (currentMonth, currentYear) => {
+  let specArray = [];
+  let tempSpec;
+  const releaseDate = currentMonth > 5 ? parseInt(currentYear) + 1 : currentYear;
 
-  const reveal = [
-    'A lengthy trailer shows the character in game',
-    'It appears in a short teaser',
-    'It is announced with screenshots'
-  ]
+  
+  while (specArray.length < 5) {
+    tempSpec = Handlers.returnRandomFromArray(db.switchpro.specs);
+    
+    if (!specArray.includes(tempSpec)) {
+      specArray.push(tempSpec);
+    }
+  }
 
-  const later = [
-    'A sakurai presentation is schedule to show the carachter details',
-    'New info to come in a future direct',
-    'Realeas date and more info to be announced later'
-  ]
+  specArray[specArray.length - 1] = `and ${specArray[specArray.length - 1]}`;
 
-  return `${Handlers.returnRandomFromArray(characters)} ${Handlers.returnRandomFromArray(announcement)}. ${Handlers.returnRandomFromArray(reveal)}. ${Handlers.returnRandomFromArray(later)}`
-
+  return `Switch Pro ${Handlers.returnRandomFromArray(db.switchpro.announcement)}. Its official name is ${Handlers.returnRandomFromArray(db.switchpro.name)}. ${Handlers.returnRandomFromArray(db.switchpro.more)} ${specArray.join(', ')}. To be released ${releaseDate}`;
 }
 
 export default {
@@ -175,5 +90,6 @@ export default {
   kirby : generateKirbyGame,
   wario : generateWarioGame,
   starfox : generateStarfoxGame,
-  smash: generateSmashCharacter(),
+  smash: generateSmashCharacter,
+  switchpro: generateSwitchProInfo,
 }

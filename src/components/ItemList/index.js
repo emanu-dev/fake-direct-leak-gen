@@ -8,10 +8,16 @@ const ItemList = styled.div`
   margin: 2rem 0;
   padding: 1.5rem 2rem 2rem 2rem;
   position: relative;
+  width: 80%;
   
   @media screen and (max-width: 1300px) {
     grid-template-columns: repeat(2, 1fr);
     padding: 1.5rem 1rem 1rem 1rem;
+  }
+
+  @media screen and (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    width: 80%;
   }
 `
 

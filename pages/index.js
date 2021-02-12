@@ -58,8 +58,8 @@ const Home = () => {
         case 'remakes': tempList.push('remakes here'); break;
         case '3rdparty': tempList.push('3rd party content here'); break;
         case 'dreamgames': tempList.push('misc content here'); break;
-        case 'smash': tempList.push(Generate.smash); break;
-        case 'switchpro': tempList.push('switch pro info here'); break;
+        case 'smash': tempList.push(Generate.smash()); break;
+        case 'switchpro': tempList.push(Generate.switchpro(broadcastDate.month, broadcastDate.year)); break;
       }
     })
 
