@@ -11,6 +11,7 @@ import Handler from '../src/utils/Handler';
 import Generate from '../src/utils/Generate';
 import DateHandler from '../src/utils/DateHandler';
 import { motion } from 'framer-motion'
+import Credits from '../src/components/Credits';
 
 
 const Home = () => {
@@ -66,14 +67,25 @@ const Home = () => {
             tempList.push(generateGameSentence('', sequelString, broadcastDate));
           });
           break;
-        case '3rdparty': tempList.push('3rd party content here'); break;
-        case 'dreamgames': tempList.push('misc content here'); break;
+        case '3rdparty': 
+          const thirdPartyArray = Generate.thirdparty(broadcastDate.month, broadcastDate.year);
+          thirdPartyArray.forEach((thirdPartyString) => {
+            tempList.push(thirdPartyString); 
+          });
+          break;
+        case 'dreamgames': tempList.push(Generate.misc()); break;
         case 'smash': tempList.push(Generate.smash()); break;
         case 'switchpro': tempList.push(Generate.switchpro(broadcastDate.month, broadcastDate.year)); break;
       }
     })
 
     setOutputList(tempList);
+
+    let interval = window.setInterval( () => {
+      outputElement.current.scrollIntoView({block: "center", behavior: "smooth"});
+      window.clearInterval(interval);
+    }, 300)
+    
   }
 
   return (
@@ -155,6 +167,19 @@ const Home = () => {
             ))}
           </Output>}
         </Widget>
+        <Credits
+        as={motion.p}
+        transition ={{delay: .3, duration: 0.5}}
+        variants={{
+            show: {opacity: 1, y:'0'},
+            hidden: {opacity: 0, y:'5%'}
+          }}
+          initial="hidden"
+          animate="show"        
+        >
+          Yes, the typos are intentional ;)<br />
+          Created by <strong>Emanuel Prado [MeteoricSwarm]</strong> - Find me on <a href='https://github.com/emanu-dev' rel='noopener norefferer' target='_blank'>GitHub</a>
+        </Credits>
       </Background>
     </div>
 

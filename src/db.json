@@ -292,7 +292,9 @@
       "Jibanyan",
       "Starman from NES Pro Wrestling",
       "Phoenix Wright",
-      "Viewtiful Joe"
+      "Viewtiful Joe",
+      "Doshin the Giant",
+      "2B"
     ],
   
     "announcement": [
@@ -399,15 +401,86 @@
     {"name": "Dril Dozer", "suffix": ["2", "for Switch"]},
     {"name": "Punch-Out!!", "suffix": ["for Switch"]}
   ],
-  "remakes" : {
-    "suffix" : ["Remastered", "DX", "Plus", "Encore", "Remix", "Switch"],
-    "game" : [
-      "Super Mario RPG",
-      "Xenoblade Chronicles X",
-      "Metroid Prime Trilogy",
-      "Metroid Fusion",
-      "Donkey Kong Country Trilogy",
-      "The Legend of Zelda: Skyward Sword"
+  "remakes" : [
+    {"name": "Super Mario RPG", "suffix":["HD", "DX", "Deluxe", "+ Desolation of Wart"], "type": "remake", "originalConsole": "SNES"},
+    {"name": "Xenoblade Chronicles X", "suffix":["Remastered", "Definitive Edition", "Encore"], "type":"remaster", "originalConsole": "Wii U"},
+    {"name": "Metroid Prime Trilogy", "suffix":["Remastered", "HD"], "type":"remaster", "originalConsole": "Wii"},
+    {"name": "Metroid Fusion", "suffix":["HD", "Ressurection"], "type": "remake", "originalConsole": "GBA"},
+    {"name": "Donkey Kong Country Trilogy", "suffix":["Collection", "HD", "- Collector's Edition"], "type":"remake collection", "originalConsole": "SNES"},
+    {"name": "The Legend of Zelda: Skyward Sword", "suffix":["HD", "Remaster"], "type": "remaster", "originalConsole": "Wii"},
+    {"name": "Kid Icarus Uprising", "suffix": ["HD", "Definitive Edition", "Deluxe"], "type": "remake", "originalConsole": "3DS"},
+    {"name": "Pokémon", "suffix": ["Shiny Diamond & Bright Pearl", "Time Diamond & Space Pearl"], "type": "remake", "originalConsole": "DS"}
+  ],
+  "thirdparty" : {
+    "info" : ["is coming to Switch", "confirmed for a switch release", "will receive a port for switch", "will finally arrive on Sitch"],
+    "games": [
+      {"name" : "GTA V", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Red Dead Redemption 2", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Resident Evil 2 Remake", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Resident Evil 3 Remake", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Resident Evil 7", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Star Wars Battlefront II", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Batman Arkham Knight", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Batman Return to Arkham", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Final Fantasy VII Remake", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Final Fantasy XV", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Ace Combat 7 - Skies Unknown", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Ace Combat: Assualt Horizon Legacy HD", "feature": ["Will have a digital only release", "Has exclusive content for the plataform"]},
+      {"name" : "Castlevania Lords of Shadow Collection", "feature": ["It uses a special 64GB cartridge", "Has exclusive content for the plataform"]},
+      {"name" : "Star Wars The Force unleashed Collection", "feature": ["Will have a digital only release", "Has exclusive content for the plataform"]},
+      {"name" : "Injustice 2: Legendary Eition", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Rage 2", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Alan Wake", "feature": ["Will have a digital only release", "Has exclusive content for the plataform"]},
+      {"name" : "Watch Dogs 2", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Watch Dogs", "feature": ["Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Splinter Cell HD Collection", "feature": ["Will have a digital only release", "Has exclusive content for the plataform"]},
+      {"name" : "Sekiro: Shadows Die Twice", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "MadWorld", "feature": ["Will have a digital only release", "Has exclusive content for the plataform"]},
+      {"name" : "Red Steel Collection", "feature": ["Will have a digital only release", "Has exclusive content for the plataform"]},
+      {"name" : "Need for Speed Heat", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Persona 5 Royal", "feature": ["Will have a digital only release", "Has exclusive content for the plataform"]},
+      {"name" : "Metal Gear Solid HD Collection", "feature": ["Will have a digital only release", "Has exclusive content for the plataform"]},
+      {"name" : "Nier Automata", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Metal Gear Solid 5 Definitive Edition", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Cyberpunk 2077", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Titanfall 2", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "For Honor", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},      
+      {"name" : "Devil May Cry 5", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},      
+      {"name" : "Yakuza Kiwami", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},      
+      {"name" : "Call of Duty Black Ops", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Star Wars Jedi: Fallen Order", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Fallout 4", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Journey", "feature": ["Will have a digital only release", "Has exclusive content for the plataform"]},
+      {"name" : "Final Fantasy XIV", "feature": ["Will have a digital only release", "Has exclusive content for the plataform"]},
+      {"name" : "Tony Hawk's Pro Skater 1 + 2", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Tomb Raider HD Collection", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Tomb Raider 2013 + Rise of The Tomb Raider", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Dishonored", "feature": ["Will have a digital only release", "Has exclusive content for the plataform"]},
+      {"name" : "Nioh", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Street Fighter 5 Arcade Edition", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "The King of Fighters 15", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Marvel's Avengers", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Grand Theft Auto Trilogy HD", "feature": ["Will have a digital only release", "Has exclusive content for the plataform"]},
+      {"name" : "Bully HD", "feature": ["Will have a digital only release", "Has exclusive content for the plataform"]},
+      {"name" : "Battlefield 3 Remastered", "feature": ["Will have a digital only release", "Has exclusive content for the plataform"]},
+      {"name" : "Life is Strange", "feature": ["Will have a digital only release", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Vanquish", "feature": ["Will have a digital only release",  "Has exclusive content for the plataform"]},
+      {"name" : "Deus EX: Human Revolution", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Middle Earth Shadow of Mordor + Shadow of War", "feature": ["It uses a special 64GB cartridge", "Has exclusive content for the plataform"]},
+      {"name" : "Deus EX: Mankind Divided", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
+      {"name" : "Soul Calibur VI", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]}
     ]
+  },
+  "misc" : {
+    "topic" : [
+      "Mother 3 is finally coming to the West as Earthbound 2. Release date TBD",
+      "Project HAMMER is being ressurected for the switch. Only a trailer is shown",
+      "A sizzle reel with indie games is shown. Including a new Shovel Kinght game.",
+      "Reggie Fill-Aime will appear, confirming he will return to Nintendo in some form.",
+      "Shigeru Miyamoto is confirmed to be working on a New IP.",
+      "Furukawa appears, announcing plans to buy studios to diversify Nintendo's games portfolio.",
+      "Microsoft's Xcloud is announced to be coming to Switch.",
+      "There will be a new fighter pass for Smash Ultimate."
+    ] 
   }
 }

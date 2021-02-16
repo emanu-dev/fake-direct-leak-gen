@@ -7,7 +7,7 @@ const Fake4Chan = styled.ul`
   box-shadow: -4px 4px 16px rgba(0, 0, 0, 0.1);
   color: #181818;
   font-family: Arial, sans-serif;
-  font-size: 8pt;
+  font-size: 9pt;
   list-style: none;
   padding: 2rem 4rem 4rem 4rem;
 `

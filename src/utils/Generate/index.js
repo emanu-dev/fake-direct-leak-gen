@@ -1,4 +1,5 @@
 import db from "../../db.json";
+import Handler from "../Handler";
 import Handlers from '../Handler';
 
 const generateMarioGame = () => {
@@ -18,7 +19,9 @@ const generateZeldaGame = () => {
     secondWord = Handlers.returnRandomFromArray(db.zelda.secondWord);
   }
 
-  return Math.random() > .4 ? `The Legend of Zelda: ${firstWord} ${joint} ${secondWord}` : `The Legend of Zelda: ${secondWord} ${firstWord}`
+  const gameName = Math.random() > .4 ? `The Legend of Zelda: ${firstWord} ${joint} ${secondWord}` : `The Legend of Zelda: ${secondWord} ${firstWord}`;
+
+  return `${gameName}${Math.random() > .4 ? ', formely known as Breath of the Wild 2,':''}`;
 }
 
 const generateDonkeyKongGame = () => {
@@ -33,7 +36,9 @@ const generateMetroidGame = () => {
   const suffix = Handlers.returnRandomFromArray(db.metroid.suffix);
   const subtitle = Handlers.returnRandomFromArray(db.metroid.subtitle);
 
-  return `Metroid ${suffix} ${subtitle}`
+  const gameName = `Metroid ${suffix} ${subtitle}`
+
+  return `${gameName}${Math.random() > .4 ? ', formely known as Metroid Prime 4,':''}`
 }
 
 const generateFZeroGame = () => {
@@ -84,33 +89,55 @@ const generateSwitchProInfo = (currentMonth, currentYear) => {
 const generateSequels = () => {
   let gameSequelArray = []
   let tempGameObject;
+  const outputArray = [];
 
   while (gameSequelArray.length < 3) {
       tempGameObject = Handlers.returnRandomFromArray(db.sequels);
 
       if (!gameSequelArray.includes(tempGameObject)) {
-        gameSequelArray.push(`${tempGameObject.name} ${Handlers.returnRandomFromArray(tempGameObject.suffix)}`)
+        gameSequelArray.push(tempGameObject);
+        outputArray.push(`${tempGameObject.name} ${Handlers.returnRandomFromArray(tempGameObject.suffix)}`)
       }
   }
-
-  return gameSequelArray;
-  
+  return outputArray;
 }
 
 const generateRemakes = () => {
   let gameRemakeArray = []
-  let tempGameName;
+  let tempGameObject;
+  const outputArray = [];
 
   while (gameRemakeArray.length < 3) {
-      tempGameName = Handlers.returnRandomFromArray(db.remakes.game);
+    tempGameObject = Handlers.returnRandomFromArray(db.remakes);
 
-      if (!gameRemakeArray.includes(tempGameName)) {
-        gameRemakeArray.push(`${tempGameName} ${Handlers.returnRandomFromArray(db.remakes.suffix)}, remake of ${tempGameName}, `)
+      if (!gameRemakeArray.includes(tempGameObject)) {
+        gameRemakeArray.push(tempGameObject);
+        outputArray.push(`${tempGameObject.name} ${Handlers.returnRandomFromArray(tempGameObject.suffix)}, ${tempGameObject.type} of ${tempGameObject.name} for the ${tempGameObject.originalConsole}, `);
       }
   }
+  return outputArray;
+}
 
-  return gameRemakeArray;
-    
+const generateThirdParty = (currentMonth, currentYear) => {
+  let thirdPartyArray = [];
+  let tempGameObject;
+  const outputArray = [];
+  const releaseDate = currentMonth > 5 ? parseInt(currentYear) + 1 : currentYear;
+  
+  while (thirdPartyArray.length < 3) {
+    tempGameObject = Handlers.returnRandomFromArray(db.thirdparty.games);
+
+    if (!thirdPartyArray.includes(tempGameObject)) {
+      thirdPartyArray.push(tempGameObject);
+      outputArray.push(`${tempGameObject.name} ${Handlers.returnRandomFromArray(db.thirdparty.info)}. ${Handlers.returnRandomFromArray(tempGameObject.feature)}. To be released ${releaseDate}`);
+    }
+  }
+
+  return outputArray;
+}
+
+const generateMisc = () => {
+  return Handlers.returnRandomFromArray(db.misc.topic);
 }
 
 export default {
@@ -125,5 +152,7 @@ export default {
   smash: generateSmashCharacter,
   switchpro: generateSwitchProInfo,
   sequels: generateSequels,
-  remakes: generateRemakes
+  remakes: generateRemakes,
+  thirdparty: generateThirdParty,
+  misc: generateMisc
 }
