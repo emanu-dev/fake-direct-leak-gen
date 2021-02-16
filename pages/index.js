@@ -60,7 +60,12 @@ const Home = () => {
             tempList.push(generateGameSentence('', sequelString, broadcastDate));
           });
           break;
-        case 'remakes': tempList.push('remakes here'); break;
+        case 'remakes': 
+          const remakeArray = Generate.remakes();
+          remakeArray.forEach((sequelString) => {
+            tempList.push(generateGameSentence('', sequelString, broadcastDate));
+          });
+          break;
         case '3rdparty': tempList.push('3rd party content here'); break;
         case 'dreamgames': tempList.push('misc content here'); break;
         case 'smash': tempList.push(Generate.smash()); break;

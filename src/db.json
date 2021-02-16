@@ -398,5 +398,16 @@
     {"name": "Diddy Kong Racing", "suffix": ["2", "for Switch"]},
     {"name": "Dril Dozer", "suffix": ["2", "for Switch"]},
     {"name": "Punch-Out!!", "suffix": ["for Switch"]}
-  ]
+  ],
+  "remakes" : {
+    "suffix" : ["Remastered", "DX", "Plus", "Encore", "Remix", "Switch"],
+    "game" : [
+      "Super Mario RPG",
+      "Xenoblade Chronicles X",
+      "Metroid Prime Trilogy",
+      "Metroid Fusion",
+      "Donkey Kong Country Trilogy",
+      "The Legend of Zelda: Skyward Sword"
+    ]
+  }
 }

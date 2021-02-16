@@ -97,6 +97,22 @@ const generateSequels = () => {
   
 }
 
+const generateRemakes = () => {
+  let gameRemakeArray = []
+  let tempGameName;
+
+  while (gameRemakeArray.length < 3) {
+      tempGameName = Handlers.returnRandomFromArray(db.remakes.game);
+
+      if (!gameRemakeArray.includes(tempGameName)) {
+        gameRemakeArray.push(`${tempGameName} ${Handlers.returnRandomFromArray(db.remakes.suffix)}, remake of ${tempGameName}, `)
+      }
+  }
+
+  return gameRemakeArray;
+    
+}
+
 export default {
   mario : generateMarioGame,
   zelda : generateZeldaGame,
@@ -109,4 +125,5 @@ export default {
   smash: generateSmashCharacter,
   switchpro: generateSwitchProInfo,
   sequels: generateSequels,
+  remakes: generateRemakes
 }
