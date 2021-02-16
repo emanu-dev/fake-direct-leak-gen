@@ -1,3 +1,5 @@
+import Head from 'next/head';
+
 import Input from '../src/components/Input';
 import db from '../src/db.json';
 import Output from "../src/components/Output";
@@ -90,6 +92,15 @@ const Home = () => {
 
   return (
     <div>
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon-16.png"  sizes="16x16"   type="image/png" />
+        <link rel="icon" href="/favicon-32.png"  sizes="32x32"   type="image/png" />
+        <link rel="icon" href="/favicon-48.png"  sizes="48x48"   type="image/png" />
+        <link rel="icon" href="/favicon-60.png"  sizes="60x60"   type="image/png" />
+        <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png" />
+        <title>Fake Direct Leak Generator</title>
+      </Head>      
       <Background>
         <Widget
         as={motion.div}
