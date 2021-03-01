@@ -406,7 +406,7 @@
     {"name": "Metroid Prime Trilogy", "suffix":["Remastered", "HD"], "type":"remaster", "originalConsole": "Wii"},
     {"name": "Metroid Fusion", "suffix":["HD", "Ressurection"], "type": "remake", "originalConsole": "GBA"},
     {"name": "Donkey Kong Country Trilogy", "suffix":["Collection", "HD", "- Collector's Edition"], "type":"remake collection", "originalConsole": "SNES"},
-    {"name": "Kid Icarus Uprising", "suffix": ["HD", "Definitive Edition", "Deluxe"], "type": "remake", "originalConsole": "3DS"},
+    {"name": "Kid Icarus Uprising", "suffix": ["HD", "Definitive Edition", "Deluxe"], "type": "remake", "originalConsole": "3DS"}
   ],
   "thirdparty" : {
     "info" : ["is coming to Switch", "confirmed for a switch release", "will receive a port for switch", "will finally arrive on Sitch"],
