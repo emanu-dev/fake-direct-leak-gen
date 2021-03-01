@@ -406,9 +406,7 @@
     {"name": "Metroid Prime Trilogy", "suffix":["Remastered", "HD"], "type":"remaster", "originalConsole": "Wii"},
     {"name": "Metroid Fusion", "suffix":["HD", "Ressurection"], "type": "remake", "originalConsole": "GBA"},
     {"name": "Donkey Kong Country Trilogy", "suffix":["Collection", "HD", "- Collector's Edition"], "type":"remake collection", "originalConsole": "SNES"},
-    {"name": "The Legend of Zelda: Skyward Sword", "suffix":["HD", "Remaster"], "type": "remaster", "originalConsole": "Wii"},
     {"name": "Kid Icarus Uprising", "suffix": ["HD", "Definitive Edition", "Deluxe"], "type": "remake", "originalConsole": "3DS"},
-    {"name": "Pokémon", "suffix": ["Shiny Diamond & Bright Pearl", "Time Diamond & Space Pearl"], "type": "remake", "originalConsole": "DS"}
   ],
   "thirdparty" : {
     "info" : ["is coming to Switch", "confirmed for a switch release", "will receive a port for switch", "will finally arrive on Sitch"],
@@ -451,7 +449,6 @@
       {"name" : "Fallout 4", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
       {"name" : "Journey", "feature": ["Will have a digital only release", "Has exclusive content for the plataform"]},
       {"name" : "Final Fantasy XIV", "feature": ["Will have a digital only release", "Has exclusive content for the plataform"]},
-      {"name" : "Tony Hawk's Pro Skater 1 + 2", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
       {"name" : "Tomb Raider HD Collection", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
       {"name" : "Tomb Raider 2013 + Rise of The Tomb Raider", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
       {"name" : "Dishonored", "feature": ["Will have a digital only release", "Has exclusive content for the plataform"]},
@@ -464,6 +461,7 @@
       {"name" : "Battlefield 3 Remastered", "feature": ["Will have a digital only release", "Has exclusive content for the plataform"]},
       {"name" : "Life is Strange", "feature": ["Will have a digital only release", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
       {"name" : "Vanquish", "feature": ["Will have a digital only release",  "Has exclusive content for the plataform"]},
+      {"name" : "Final Fantasy: Ever Crisis", "feature": ["Will have a digital only release",  "Has exclusive content for the plataform"]},
       {"name" : "Deus EX: Human Revolution", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
       {"name" : "Middle Earth Shadow of Mordor + Shadow of War", "feature": ["It uses a special 64GB cartridge", "Has exclusive content for the plataform"]},
       {"name" : "Deus EX: Mankind Divided", "feature": ["It uses a special 64GB cartridge", "Will be exclusive to the Switch Pro", "In the form of cloud streaming", "Has exclusive content for the plataform"]},
